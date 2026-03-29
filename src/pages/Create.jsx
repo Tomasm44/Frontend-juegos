@@ -12,7 +12,7 @@ function Create() {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
-        "Authorization": token // <--- ESTO ES VITAL
+        "Authorization": `Bearer ${token}` // <--- ESTO ES VITAL
       },
       body: JSON.stringify({ titulo, precio, imagen, descripcion: "Nuevo juego" })
     })
