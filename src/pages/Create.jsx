@@ -8,7 +8,7 @@ function Create() {
   const handlePublish = async () => {
     const token = localStorage.getItem("token") // Recuperamos el token guardado en el Login
 
-    const response = await fetch("https://backend-juegos-b44b.onrender.com", {
+    const response = await fetch("https://backend-juegos-b44b.onrender.com/games", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
