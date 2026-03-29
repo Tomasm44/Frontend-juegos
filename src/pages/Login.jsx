@@ -21,6 +21,8 @@ function Login() {
       if (response.ok) {
         localStorage.setItem("token", data.token) // Guardamos el token para otras peticiones
         setUser({ email }) 
+        setEmail("")
+        setPassword("")
         alert("¡Bienvenido!")
         navigate("/profile")
       } else {
@@ -36,7 +38,7 @@ function Login() {
       <div className="form-container">
         <h1>Login</h1>
         <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-        <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)} />
+        <input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <button onClick={handleLogin}>Iniciar sesión</button>
       </div>
     </div>
