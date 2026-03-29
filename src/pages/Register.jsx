@@ -8,7 +8,7 @@ function Register() {
   const navigate = useNavigate()
 
   const handleRegister = async () => {
-    await fetch("https://backend-juegos-b44b.onrender.com", {
+    await fetch("https://backend-juegos-b44b.onrender.com/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre, email, password })

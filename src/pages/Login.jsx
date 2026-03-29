@@ -10,7 +10,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("https://backend-juegos-b44b.onrender.com", {
+      const response = await fetch("https://backend-juegos-b44b.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password })

@@ -7,7 +7,7 @@ function Gallery() {
 
   useEffect(() => {
     // Reemplaza con tu URL de Render
-    fetch("https://backend-juegos-b44b.onrender.com") 
+    fetch("https://backend-juegos-b44b.onrender.com/games") 
       .then(res => res.json())
       .then(data => setJuegos(data))
       .catch(error => console.error("Error cargando juegos:", error))
